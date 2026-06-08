@@ -1,20 +1,10 @@
 {
+  "extends": "./.wxt/tsconfig.json",
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "preserve",
     "paths": {
       "@/*": ["./*"]
     }
   },
-  "include": ["entrypoints/**/*.ts", "entrypoints/**/*.vue", "wxt.config.ts"],
+  "include": ["entrypoints/**/*.ts", "entrypoints/**/*.vue", "wxt.config.ts", ".wxt/tsconfig.json", ".wxt/wxt.d.ts", ".wxt/types/**/*.d.ts", "env.d.ts"],
   "exclude": ["node_modules", ".output", "dist"]
 }

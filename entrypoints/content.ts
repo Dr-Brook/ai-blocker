@@ -66,13 +66,13 @@ export default defineContentScript({
     try {
       // Check for updated filter lists from storage first
       let text: string | null = null;
-      const stored = await browser.storage.local.get('filterListUpdates');
+      const stored: { filterListUpdates?: Record<string, string> } = await browser.storage.local.get('filterListUpdates');
       if (stored.filterListUpdates?.['cosmetic-rules.txt']) {
-        text = stored.filterListUpdates['cosmetic-rules.txt'];
+        text = stored.filterListUpdates['cosmetic-rules.txt'] as string;
       }
 
       if (!text) {
-        const url = browser.runtime.getURL('filter-lists/cosmetic-rules.txt');
+        const url = browser.runtime.getURL('filter-lists/cosmetic-rules.txt' as any);
         const response = await fetch(url);
         if (response.ok) {
           text = await response.text();
@@ -99,7 +99,7 @@ export default defineContentScript({
     }
 
     async function applyCosmeticRules() {
-      const { enabled, categories, whitelist } = await browser.storage.local.get([
+      const { enabled, categories, whitelist }: { enabled?: boolean; categories?: any[]; whitelist?: string[] } = await browser.storage.local.get([
         'enabled',
         'categories',
         'whitelist',
