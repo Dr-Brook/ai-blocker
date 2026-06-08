@@ -52,5 +52,14 @@
       "urlFilter": "||reddit.com/api/ai",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||copilot.microsoft.com",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
   }
 ]

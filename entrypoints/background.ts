@@ -36,7 +36,7 @@ const DEFAULT_STATS: BlockStats = {
 
 // Initialize storage on install
 browser.runtime.onInstalled.addListener(async () => {
-  const stored = await browser.storage.local.get(['categories', 'stats', 'enabled', 'whitelist']);
+  const stored = await browser.storage.local.get(['categories', 'stats', 'enabled', 'whitelist', 'lastFilterUpdate']);
   if (!stored.categories) {
     await browser.storage.local.set({ categories: DEFAULT_CATEGORIES });
   }
@@ -49,9 +49,15 @@ browser.runtime.onInstalled.addListener(async () => {
   if (!stored.whitelist) {
     await browser.storage.local.set({ whitelist: [] });
   }
+  if (!stored.lastFilterUpdate) {
+    await browser.storage.local.set({ lastFilterUpdate: 0 });
+  }
 
   // Apply DNR rules based on enabled categories
   await applyDnrRules();
+
+  // Check for filter list updates on install
+  await checkFilterListUpdates();
 });
 
 // Apply declarativeNetRequest rules
@@ -207,6 +213,54 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
       sendResponse({ success: true, whitelist: list });
     });
     return true;
+  }
+});
+
+// Filter list auto-update
+const FILTER_LIST_UPDATE_INTERVAL = 7 * 24 * 60 * 60 * 1000; // 7 days in ms
+const FILTER_LIST_BASE_URL = 'https://raw.githubusercontent.com/Dr-Brook/ai-blocker/main/filter-lists';
+const FILTER_LIST_FILES = [
+  'chat-widgets.txt',
+  'search-ai.txt',
+  'content-ai.txt',
+  'social-ai.txt',
+  'tracking.txt',
+  'overlays.txt',
+  'cosmetic-rules.txt',
+];
+
+async function checkFilterListUpdates() {
+  const { lastFilterUpdate } = await browser.storage.local.get('lastFilterUpdate');
+  const now = Date.now();
+
+  if (lastFilterUpdate && now - lastFilterUpdate < FILTER_LIST_UPDATE_INTERVAL) {
+    return; // Not time yet
+  }
+
+  try {
+    const updates: Record<string, string> = {};
+    for (const file of FILTER_LIST_FILES) {
+      const url = `${FILTER_LIST_BASE_URL}/${file}`;
+      const response = await fetch(url);
+      if (response.ok) {
+        updates[file] = await response.text();
+      }
+    }
+
+    if (Object.keys(updates).length > 0) {
+      await browser.storage.local.set({ filterListUpdates: updates, lastFilterUpdate: now });
+      console.log(`AI Blocker: Updated ${Object.keys(updates).length} filter lists`);
+    }
+  } catch (e) {
+    console.warn('AI Blocker: Filter list update check failed:', e);
+  }
+}
+
+// Periodic alarm for filter list updates
+browser.alarms?.create?.('filterListUpdate', { periodInMinutes: 7 * 24 * 60 }); // weekly
+browser.alarms?.onAlarm?.addListener?.((alarm) => {
+  if (alarm.name === 'filterListUpdate') {
+    checkFilterListUpdates();
   }
 });
 

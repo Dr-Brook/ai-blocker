@@ -1,13 +1,14 @@
 ! AI Blocker — Content AI Network Blocklist
 ! Blocks AI writing/content tools
-! Version: 1.0.0
+! Version: 1.1.0
+! Last modified: 2026-06-07
 
 ! Grammarly
 ||grammarly.com/api^
-||grammarkit.com^
 
 ! Notion AI
 ||notion.so/api/ai^
+||notion.ai^
 
 ! Jasper AI
 ||jasper.ai^
@@ -23,3 +24,9 @@
 
 ! ProWritingAid AI
 ||prowritingaid.com/api/ai^
+
+! Canva AI
+||canva.com/api/ai^
+
+! Adobe Firefly
+||firefly.adobe.com^

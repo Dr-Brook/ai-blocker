@@ -64,10 +64,22 @@ export default defineContentScript({
     // Load cosmetic rules from the filter list file
     let cosmeticRules: CosmeticRule[] = [];
     try {
-      const url = browser.runtime.getURL('filter-lists/cosmetic-rules.txt');
-      const response = await fetch(url);
-      if (response.ok) {
-        const text = await response.text();
+      // Check for updated filter lists from storage first
+      let text: string | null = null;
+      const stored = await browser.storage.local.get('filterListUpdates');
+      if (stored.filterListUpdates?.['cosmetic-rules.txt']) {
+        text = stored.filterListUpdates['cosmetic-rules.txt'];
+      }
+
+      if (!text) {
+        const url = browser.runtime.getURL('filter-lists/cosmetic-rules.txt');
+        const response = await fetch(url);
+        if (response.ok) {
+          text = await response.text();
+        }
+      }
+
+      if (text) {
         cosmeticRules = parseCosmeticRules(text);
       } else {
         console.warn('AI Blocker: Failed to load cosmetic-rules.txt, using fallback rules');

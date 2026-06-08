@@ -1,6 +1,7 @@
 ! AI Blocker — Social AI Network Blocklist
 ! Blocks AI features in social media
-! Version: 1.0.0
+! Version: 1.1.0
+! Last modified: 2026-06-07
 
 ! Twitter/X Grok
 ||api.x.com/grok^
@@ -15,3 +16,6 @@
 
 ! Reddit AI summaries
 ||reddit.com/api/ai^
+
+! Microsoft Copilot social embeds
+||copilot.microsoft.com^

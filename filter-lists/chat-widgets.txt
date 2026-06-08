@@ -1,13 +1,17 @@
 ! AI Blocker — Chat Widgets Network Blocklist
 ! Blocks requests to AI chat widget endpoints
-! Version: 1.0.0
-! Last modified: 2025-06-07
+! Version: 1.1.0
+! Last modified: 2026-06-07
 ! Homepage: https://github.com/Dr-Brook/ai-blocker
 
 ! OpenAI / ChatGPT embeds
 ||chatgpt.com/embed^
 ||chat.openai.com/embed^
 ||cdn.oaistatic.com^
+
+! Anthropic / Claude embeds
+||claude.ai^
+||anthropic.com^
 
 ! Intercom AI
 ||intercom-ai.com^
@@ -37,3 +41,9 @@
 
 ! Kommunicate AI
 ||kommunicate.io/api/ai^
+
+! Microsoft Copilot web embeds
+||copilot.microsoft.com^
+
+! Perplexity embeds
+||perplexity.ai^

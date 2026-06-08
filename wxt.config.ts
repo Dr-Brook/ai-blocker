@@ -9,7 +9,7 @@ export default defineConfig({
     name: 'AI Blocker',
     description: 'Block AI content across the web — chat widgets, AI summaries, tracking scripts, and overlays.',
     version: '1.0.0',
-    permissions: ['declarativeNetRequest', 'declarativeNetRequestFeedback', 'storage', 'activeTab', 'tabs'],
+    permissions: ['declarativeNetRequest', 'declarativeNetRequestFeedback', 'storage', 'activeTab', 'tabs', 'alarms'],
     host_permissions: ['<all_urls>'],
     icons: {
       '16': 'icon/16.png',

@@ -1,8 +1,9 @@
 ! AI Blocker — Search AI Network Blocklist
 ! Blocks AI-enhanced search features
-! Version: 1.0.0
+! Version: 1.1.0
+! Last modified: 2026-06-07
 
-! Google SGE / AI Overviews
+! Google SGE / AI Overviews / Gemini
 ||generativelanguage.googleapis.com^
 ||gemini.google.com^
 
@@ -21,3 +22,6 @@
 
 ! You.com AI
 ||you.com/api/ai^
+
+! Apple Intelligence web components
+||api.apple.com/intelligence^

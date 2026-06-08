@@ -70,5 +70,14 @@
       "urlFilter": "||you.com/api/ai",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||api.apple.com/intelligence",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
   }
 ]

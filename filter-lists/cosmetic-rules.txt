@@ -1,8 +1,8 @@
 ! AI Blocker — Cosmetic Rules (Element Hiding)
 ! CSS selector rules to hide AI elements in the DOM
 ! Format: domain##selector (empty domain = all sites)
-! Version: 1.0.0
-! Last modified: 2025-06-07
+! Version: 1.1.0
+! Last modified: 2026-06-07
 
 ! === Chat Widgets ===
 ##[class*="chatgpt-widget"]
@@ -20,16 +20,34 @@
 ##[class*="ai-assistant-button"]
 ##[class*="ai-fab"]
 
+! === Claude / Anthropic ===
+##[class*="claude-widget"]
+##[class*="anthropic-embed"]
+##[class*="claude-chat"]
+##[data-claude-assistant]
+
 ! === Search AI ===
 google.com##.SGeAIResponse
 google.com##[class*="ai-overview"]
 google.com##[data-attrid*="SGE"]
+google.com##[class*="UH8YAf"]
+google.com##.I5RQwc
 bing.com##[class*="b_algoAI"]
 bing.com##.cib-serp-ai
 bing.com##[class*="copilot"]
+bing.com###b_syftg
 duckduckgo.com##[class*="duckduckgo-ai"]
 ##[class*="ai-answer"]
 ##[class*="ai-snippet"]
+
+! === Google Gemini ===
+gemini.google.com##[class*="gemini-embed"]
+google.com##[class*="gemini-widget"]
+
+! === Apple Intelligence ===
+apple.com##[class*="apple-intelligence"]
+##[class*="apple-ai-badge"]
+##[class*="siri-suggestion"]
 
 ! === Content AI ===
 ##[class*="grammarly-btn"]
@@ -42,15 +60,39 @@ duckduckgo.com##[class*="duckduckgo-ai"]
 ##.ai-toolbar
 ##[class*="copilot-sidebar"]
 
+! === Notion AI ===
+notion.so##[class*="notion-ai-button"]
+notion.so##[class*="askAI"]
+notion.so##.notion-ai
+
+! === Canva AI ===
+canva.com##[class*="canva-ai"]
+canva.com##[class*="magic-write"]
+
+! === Adobe Firefly ===
+adobe.com##[class*="firefly-embed"]
+adobe.com##[class*="adobe-ai"]
+
+! === Microsoft Copilot ===
+##[class*="copilot-widget"]
+##[class*="copilot-sidebar"]
+##[data-copilot]
+microsoft.com##[class*="copilot-button"]
+
 ! === Social AI ===
 twitter.com##[class*="grok"]
 x.com##[class*="grok"]
 x.com##[data-testid*="grok"]
 facebook.com##[class*="meta-ai"]
+facebook.com##[aria-label*="Meta AI"]
 instagram.com##[class*="meta-ai"]
 linkedin.com##[class*="linkedin-ai"]
 ##[class*="ai-feed"]
 ##[data-ai-recommendation]
+
+! === Perplexity ===
+##[class*="perplexity-embed"]
+##[data-perplexity-widget]
 
 ! === AI Overlays ===
 ##[class*="ai-onboarding"]
