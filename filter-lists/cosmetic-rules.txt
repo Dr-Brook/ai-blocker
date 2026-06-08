@@ -1,0 +1,64 @@
+! AI Blocker — Cosmetic Rules (Element Hiding)
+! CSS selector rules to hide AI elements in the DOM
+! Format: domain##selector (empty domain = all sites)
+! Version: 1.0.0
+! Last modified: 2025-06-07
+
+! === Chat Widgets ===
+##[class*="chatgpt-widget"]
+##[id*="chatgpt-widget"]
+##[class*="ai-chat-widget"]
+##[class*="intercom-ai"]
+##[class*="drift-ai"]
+##.crisp-chat
+##[data-ai-assistant]
+##[class*="ai-widget"]
+##[id*="ai-widget"]
+##[class*="openai-embed"]
+##openai-chatbot
+##[class*="chatbot-container"]
+##[class*="ai-assistant-button"]
+##[class*="ai-fab"]
+
+! === Search AI ===
+google.com##.SGeAIResponse
+google.com##[class*="ai-overview"]
+google.com##[data-attrid*="SGE"]
+bing.com##[class*="b_algoAI"]
+bing.com##.cib-serp-ai
+bing.com##[class*="copilot"]
+duckduckgo.com##[class*="duckduckgo-ai"]
+##[class*="ai-answer"]
+##[class*="ai-snippet"]
+
+! === Content AI ===
+##[class*="grammarly-btn"]
+##[class*="notion-ai"]
+##[class*="wp-ai-assistant"]
+##[class*="ai-writing-tool"]
+##[data-ai-suggestion]
+##[class*="ai-complete"]
+##[class*="ai-generate-btn"]
+##.ai-toolbar
+##[class*="copilot-sidebar"]
+
+! === Social AI ===
+twitter.com##[class*="grok"]
+x.com##[class*="grok"]
+x.com##[data-testid*="grok"]
+facebook.com##[class*="meta-ai"]
+instagram.com##[class*="meta-ai"]
+linkedin.com##[class*="linkedin-ai"]
+##[class*="ai-feed"]
+##[data-ai-recommendation]
+
+! === AI Overlays ===
+##[class*="ai-onboarding"]
+##[class*="ai-popup"]
+##[class*="try-ai"]
+##[class*="ai-modal"]
+##[class*="ai-banner"]
+##[class*="ai-overlay"]
+##[class*="ai-upsell"]
+##[class*="ai-prompt-banner"]
+##[class*="ai-nudge"]

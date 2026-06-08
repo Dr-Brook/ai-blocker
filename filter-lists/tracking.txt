@@ -1,0 +1,23 @@
+! AI Blocker — AI Tracking Network Blocklist
+! Blocks AI analytics and personalization scripts
+! Version: 1.0.0
+
+! AI analytics
+||ai-analytics.com^
+||api.openai.com/v1/usage^
+
+! AI personalization
+||personalize.ai^
+||ai-recommend.com^
+
+! Algolia AI
+||algolia.net/api/ai^
+
+! Dynamic Yield AI
+||dy-api.com/ai^
+
+! Optimizely AI
+||optimizely.com/api/ai^
+
+! Segment AI
+||segment.com/api/ai^

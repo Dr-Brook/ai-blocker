@@ -1,0 +1,23 @@
+{
+  "name": "ai-blocker",
+  "description": "Browser extension that blocks AI content like ad blockers block ads. Chrome + Firefox.",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "wxt",
+    "dev:firefox": "wxt --browser firefox",
+    "build": "wxt build",
+    "build:firefox": "wxt build --browser firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip --browser firefox",
+    "compile": "tsc --noEmit",
+    "postbuild": "node scripts/copy-rules.cjs"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.7",
+    "typescript": "^5.6.0",
+    "vue": "^3.5.35",
+    "wxt": "^0.20.0"
+  }
+}

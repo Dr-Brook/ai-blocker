@@ -1,0 +1,23 @@
+! AI Blocker — Search AI Network Blocklist
+! Blocks AI-enhanced search features
+! Version: 1.0.0
+
+! Google SGE / AI Overviews
+||generativelanguage.googleapis.com^
+||gemini.google.com^
+
+! Bing Copilot
+||copilot.microsoft.com^
+||edgeservices.bing.com/edgesvc/chat^
+
+! DuckDuckGo AI
+||duckduckgo.com/ddg/ai^
+
+! Brave Search AI
+||search.brave.com/api/ai^
+
+! Perplexity
+||perplexity.ai^
+
+! You.com AI
+||you.com/api/ai^

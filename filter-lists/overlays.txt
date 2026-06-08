@@ -1,0 +1,12 @@
+! AI Blocker — AI Overlays Network Blocklist
+! Blocks AI popup/overlay scripts
+! Version: 1.0.0
+
+! AI prompt/upsell tracking
+||ai-onboard.com^
+||ai-upsell.com^
+||ai-prompt.com^
+
+! General AI SDKs that inject overlays
+||sdk.openai.com^
+||ai-widget.com^

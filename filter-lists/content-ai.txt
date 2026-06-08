@@ -1,0 +1,25 @@
+! AI Blocker — Content AI Network Blocklist
+! Blocks AI writing/content tools
+! Version: 1.0.0
+
+! Grammarly
+||grammarly.com/api^
+||grammarkit.com^
+
+! Notion AI
+||notion.so/api/ai^
+
+! Jasper AI
+||jasper.ai^
+
+! Copy.ai
+||copy.ai/api^
+
+! Writesonic
+||writesonic.com/api^
+
+! Wordtune
+||wordtune.com^
+
+! ProWritingAid AI
+||prowritingaid.com/api/ai^
