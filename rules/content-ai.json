@@ -4,7 +4,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||jasper.ai",
+      "urlFilter": "||grammarly.com/api",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   },
@@ -13,7 +13,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||copy.ai/api",
+      "urlFilter": "||grammarkit.com",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   },
@@ -22,7 +22,52 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
+      "urlFilter": "||notion.so/api/ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||jasper.ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||copy.ai/api",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||writesonic.com/api",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
       "urlFilter": "||wordtune.com",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||prowritingaid.com/api/ai",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   }

@@ -4,7 +4,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||meta.ai",
+      "urlFilter": "||api.x.com/grok",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   },
@@ -13,7 +13,43 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||api.x.com/grok",
+      "urlFilter": "||x.com/i/grok",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||meta.ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||api.meta.com/ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||linkedin.com/api/ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||reddit.com/api/ai",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   }

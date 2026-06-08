@@ -157,6 +157,23 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
     return true;
   }
 
+  if (message.type === 'INCREMENT_COSMETIC_BATCH') {
+    browser.storage.local.get('stats').then(async ({ stats }) => {
+      const s: BlockStats = stats || DEFAULT_STATS;
+      const counts: Record<string, number> = message.counts || {};
+ let total = 0;
+      for (const [cat, count] of Object.entries(counts)) {
+        total += count;
+        if (!s.byCategory[cat]) s.byCategory[cat] = { networkBlocked: 0, cosmeticHidden: 0 };
+        s.byCategory[cat].cosmeticHidden += count;
+      }
+      s.cosmeticHidden += total;
+      await browser.storage.local.set({ stats: s });
+      sendResponse({ success: true });
+    });
+    return true;
+  }
+
   if (message.type === 'RESET_STATS') {
     browser.storage.local.set({ stats: DEFAULT_STATS }).then(() => {
       sendResponse({ success: true });

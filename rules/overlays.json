@@ -4,16 +4,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||ai-onboard.com",
-      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
-    }
-  },
-  {
-    "id": 2,
-    "priority": 1,
-    "action": { "type": "block" },
-    "condition": {
-      "urlFilter": "||ai-widget.com",
+      "urlFilter": "||sdk.openai.com",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   }

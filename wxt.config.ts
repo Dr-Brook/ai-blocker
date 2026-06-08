@@ -42,5 +42,11 @@ export default defineConfig({
         { id: 'rules_overlays', enabled: true, path: 'rules/overlays.json' },
       ],
     },
+    web_accessible_resources: [
+      {
+        resources: ['filter-lists/*.txt'],
+        matches: ['<all_urls>'],
+      },
+    ],
   },
 });

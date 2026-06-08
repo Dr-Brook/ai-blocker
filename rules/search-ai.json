@@ -13,7 +13,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||copilot.microsoft.com",
+      "urlFilter": "||gemini.google.com",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   },
@@ -22,7 +22,52 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
+      "urlFilter": "||copilot.microsoft.com",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||edgeservices.bing.com/edgesvc/chat",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||duckduckgo.com/ddg/ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||search.brave.com/api/ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 7,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
       "urlFilter": "||perplexity.ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 8,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||you.com/api/ai",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   }

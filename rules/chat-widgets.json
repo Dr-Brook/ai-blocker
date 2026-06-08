@@ -40,7 +40,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||drift-ai.com",
+      "urlFilter": "||api.intercom.io/ai",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   },
@@ -49,7 +49,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||ada.ai",
+      "urlFilter": "||drift-ai.com",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   },
@@ -58,7 +58,7 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "||forethought.ai",
+      "urlFilter": "||js.driftt.com/ai",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   },
@@ -67,7 +67,61 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
+      "urlFilter": "||crisp.chat/api/ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 9,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||ada.ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 10,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||zendesk.com/api/ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 11,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||forethought.ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 12,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||ada.support",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 13,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
       "urlFilter": "||tidiochat.com/api/ai",
+      "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
+    }
+  },
+  {
+    "id": 14,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "||kommunicate.io/api/ai",
       "resourceTypes": ["script", "xmlhttprequest", "sub_frame", "other"]
     }
   }
